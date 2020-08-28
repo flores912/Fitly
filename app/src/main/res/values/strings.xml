@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Fitly</string>
+    <!-- ... -->
+    <string name="facebook_application_id" translatable="false">927543307766415</string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">fb927543307766415</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="workout">Workout</string>
+    <string name="browse">Browse</string>
+    <string name="home">Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
