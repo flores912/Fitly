@@ -2,7 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="344dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center">
 
@@ -15,18 +15,101 @@
             android:layout_height="116dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/videoView">
+            app:layout_constraintTop_toBottomOf="@+id/videoViewUserPostItem">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textViewLikesUserPostItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Description goes here.."
+                android:layout_marginTop="8dp"
+                android:text="likes"
+                android:textColor="#000000"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLikeUserPostItem" />
+
+            <TextView
+                android:id="@+id/textViewUsernameDescriptionUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="username"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLikesUserPostItem" />
+
+            <TextView
+                android:id="@+id/textViewDescriptionUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Description goes here..."
+                android:textColor="#000"
+                app:layout_constraintStart_toEndOf="@+id/textViewUsernameDescriptionUserPostItem"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLikesUserPostItem" />
+
+            <ImageView
+                android:id="@+id/imageViewLikeUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_like" />
+
+            <ImageView
+                android:id="@+id/imageViewCommentUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLikeUserPostItem"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mode_comment" />
+
+            <TextView
+                android:id="@+id/textViewMoreUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="more"
+                app:layout_constraintStart_toEndOf="@+id/textViewDescriptionUserPostItem"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLikesUserPostItem" />
+
+            <TextView
+                android:id="@+id/textViewTimePostedUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="time since post"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsernameDescriptionUserPostItem" />
+
+            <ImageView
+                android:id="@+id/imageViewAddNewWorkoutChallengeUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_library_add" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +122,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageViewUserPostItem"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
@@ -52,32 +135,70 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textViewUsernameUserPostItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="Title"
+                android:layout_marginTop="16dp"
+                android:text="username"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewUserPostItem"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textViewChallengeTitleUserPostItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="#Challenge"
+                android:text="#challenge"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                tools:layout_editor_absoluteY="37dp" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewUserPostItem"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsernameUserPostItem" />
+
+            <ImageView
+                android:id="@+id/imageViewMoreSettingsUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more" />
+
+            <ImageView
+                android:id="@+id/imageViewDotUserPostItem"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUsernameUserPostItem"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_dot" />
+
+            <TextView
+                android:id="@+id/textViewFollowUserPostItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Follow"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDotUserPostItem"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <VideoView
-            android:id="@+id/videoView"
-            android:layout_width="344dp"
+            android:id="@+id/videoViewUserPostItem"
+            android:layout_width="match_parent"
             android:layout_height="194dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
