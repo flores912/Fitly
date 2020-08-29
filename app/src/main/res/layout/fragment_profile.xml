@@ -22,10 +22,10 @@
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="256dp"
+                android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
                 app:contentScrim="@color/colorPrimary"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:titleEnabled="false">
 
 
@@ -36,35 +36,38 @@
                     android:layout_gravity="top"
                     android:layout_marginBottom="48dp"
                     android:background="@color/colorPrimary"
+                    android:elevation="4dp"
                     android:theme="?attr/actionBarTheme"
                     app:layout_collapseMode="pin" />
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom">
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Monday" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tuesday" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Wednesday" />
-                </com.google.android.material.tabs.TabLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayoutProfileContent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monday" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tuesday" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wednesday" />
+                    </com.google.android.material.tabs.TabLayout>
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -101,11 +104,11 @@
                                 android:id="@+id/textView6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
                                 android:gravity="center"
                                 android:text="0"
                                 android:textColor="#000"
                                 android:textSize="18sp"
-                                android:textStyle="bold"
                                 app:layout_columnWeight="1"
                                 app:layout_gravity="fill"
                                 app:layout_row="0"
@@ -115,6 +118,7 @@
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="center"
                                 android:text="Posts"
                                 android:textColor="#000"
@@ -129,11 +133,11 @@
                                 android:id="@+id/textView8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
                                 android:gravity="center"
                                 android:text="0"
                                 android:textColor="#000"
                                 android:textSize="18sp"
-                                android:textStyle="bold"
                                 app:layout_column="1"
                                 app:layout_columnWeight="1"
                                 app:layout_gravity="fill"
@@ -144,6 +148,7 @@
                                 android:id="@+id/textView9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="center"
                                 android:text="Followers"
                                 android:textColor="#000"
@@ -158,11 +163,11 @@
                                 android:id="@+id/textView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
                                 android:gravity="center"
                                 android:text="0"
                                 android:textColor="#000"
                                 android:textSize="18sp"
-                                android:textStyle="bold"
                                 app:layout_column="2"
                                 app:layout_columnWeight="1"
                                 app:layout_gravity="fill"
@@ -173,6 +178,7 @@
                                 android:id="@+id/textView11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
                                 android:gravity="center"
                                 android:text="Following"
                                 android:textColor="#000"
@@ -184,6 +190,122 @@
                                 app:layout_rowWeight="1" />
                         </androidx.gridlayout.widget.GridLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        android:text="Name"
+                        android:textColor="#000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-light"
+                        android:includeFontPadding="false"
+                        android:text="Bio"
+                        android:textColor="#000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Edit Profile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Challenge Highlights"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Keep your favorite challenges here"
+                        android:textColor="#000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_expand_less"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_add_circle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="New"
+                        android:textColor="#000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
