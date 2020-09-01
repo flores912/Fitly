@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                             fragment = new HomeFragment();
                             break;
 
-                        case R.id.browse_page:
-                            fragment = new BrowseFragment();
+                        case R.id.discover_page:
+                            fragment = new DiscoverFragment();
                             break;
 
                         case R.id.workout_page:

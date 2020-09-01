@@ -6,10 +6,10 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home"/>
     <item
-        android:id="@+id/browse_page"
+        android:id="@+id/discover_page"
         android:enabled="true"
-        android:icon="@drawable/ic_browse"
-        android:title="@string/browse"/>
+        android:icon="@drawable/ic_discover"
+        android:title="@string/discover"/>
 
     <item
         android:id="@+id/workout_page"
