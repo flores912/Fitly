@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                             fragment = new WorkoutFragment();
                             break;
 
-                        case R.id.notification_page:
+                        case R.id.activity_page:
                             fragment = new NotificationsFragment();
                             break;
 
