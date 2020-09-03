@@ -12,10 +12,10 @@
         android:title="@string/discover"/>
 
     <item
-        android:id="@+id/workout_page"
+        android:id="@+id/add_new_post_page"
         android:enabled="true"
         android:icon="@drawable/ic_workout"
-        android:title="@string/workout"/>
+        android:title="@string/addNewPost"/>
     <item
         android:id="@+id/activity_page"
         android:enabled="true"

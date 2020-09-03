@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WorkoutFragment extends Fragment {
+public class AddNewPostFragment extends Fragment {
 
-    public WorkoutFragment() {
+    public AddNewPostFragment() {
         // Required empty public constructor
     }
 
@@ -23,6 +23,6 @@ public class WorkoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_workout, container, false);
+        return inflater.inflate(R.layout.fragment_add_new_post, container, false);
     }
 }

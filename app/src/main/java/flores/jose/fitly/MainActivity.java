@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                             fragment = new DiscoverFragment();
                             break;
 
-                        case R.id.workout_page:
-                            fragment = new WorkoutFragment();
+                        case R.id.add_new_post_page:
+                            fragment = new AddNewPostFragment();
                             break;
 
                         case R.id.activity_page:
