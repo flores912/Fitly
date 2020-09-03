@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AddNewPostFragment extends Fragment {
+public class AddNewPostCameraFragment extends Fragment {
 
-    public AddNewPostFragment() {
+    public AddNewPostCameraFragment() {
         // Required empty public constructor
     }
 
@@ -23,6 +23,6 @@ public class AddNewPostFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_new_post, container, false);
+        return inflater.inflate(R.layout.fragment_add_new_post_camera, container, false);
     }
 }

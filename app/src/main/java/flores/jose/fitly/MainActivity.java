@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.add_new_post_page:
-                            fragment = new AddNewPostFragment();
+                            fragment = new AddNewPostCameraFragment();
+                            //hide bottom nav for camera ui.
+                            bottomNavigationView.setVisibility(View.GONE);
                             break;
 
                         case R.id.activity_page:
